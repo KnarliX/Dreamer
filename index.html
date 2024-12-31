@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janvi Dreamer</title>
+    <link rel="icon" href="dreamer.ico" type="image/x-icon">
+    <meta name="description" content="Welcome to Janvi Dreamer's gaming universe. Join me for amazing gaming content, streams, and community events!">
+    <meta name="keywords" content="Janvi Dreamer, Gaming, Content Creator, YouTube, Gaming Community">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="animations.css">
+    <script src="main.js" defer></script>
+    <script src="modal.js" defer></script>
+    <script src="form.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <div class="logo">
+                <div class="logo-ring"></div>
+                <div class="logo-inner">
+                    <svg class="gamepad-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 12h4m-2-2v4m7-3h.01M19 11h.01M18 6H6a4 4 0 00-4 4v4a4 4 0 004 4h12a4 4 0 004-4v-4a4 4 0 00-4-4z"/>
+                    </svg>
+                </div>
+            </div>
+            <h1>Janvi Dreamer</h1>
+            <p class="subtitle">Content Creator & Gamer</p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="links">
+            <a href="https://www.youtube.com/channel/UCa4-5c2gCYxqummRhmh6V4Q" target="_blank" class="link youtube">
+                <span class="link-content">
+                    <i class="icon youtube-icon"></i>
+                    YouTube Channel
+                </span>
+                <span class="arrow">→</span>
+            </a>
+
+            <a href="https://www.instagram.com/janvi.dreamer.yt" target="_blank" class="link instagram">
+                <span class="link-content">
+                    <i class="icon instagram-icon"></i>
+                    Instagram
+                </span>
+                <span class="arrow">→</span>
+            </a>
+
+            <button onclick="openModal('coming-soon')" class="link twitter">
+                <span class="link-content">
+                    <i class="icon twitter-icon"></i>
+                    Twitter
+                </span>
+                <span class="arrow">→</span>
+            </button>
+
+            <a href="https://discord.gg/zTVbCP6Rj4" target="_blank" class="link discord">
+                <span class="link-content">
+                    <i class="icon discord-icon"></i>
+                    Discord Server
+                </span>
+                <span class="arrow">→</span>
+            </a>
+
+            <button onclick="openModal('contact')" class="link contact">
+                <span class="link-content">
+                    <i class="icon mail-icon"></i>
+                    Contact Me
+                </span>
+                <span class="arrow">→</span>
+            </button>
+        </div>
+
+        <footer>
+            © <span id="year"></span> Janvi Dreamer. All rights reserved.<br>
+Email me at <a href="mailto:janvi@dreamer.com">janvi@dreamer.com</a>
+        </footer>
+    </div>
+
+    <!-- Coming Soon Modal -->
+    <div id="coming-soon" class="modal">
+        <div class="modal-content">
+            <h2>Coming Soon!</h2>
+            <p>This feature is currently under development. Stay tuned for updates!</p>
+            <button onclick="closeModal('coming-soon')">Close</button>
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div id="contact" class="modal">
+        <div class="modal-content">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Name (required)" required>
+<input type="text" id="discordId" placeholder="Discord ID (optional)">
+<input type="email" id="email" placeholder="Email (optional)">
+<input type="tel" id="phone" placeholder="Phone (optional)">
+<input type="text" id="subject" placeholder="Subject (required)" required>
+<textarea id="message" placeholder="Your message" required></textarea>
+<div class="g-recaptcha" data-sitekey="6LfeK6gqAAAAANmMn1xMOGyU64B8k_jH6vU9mvSm"></div>
+
+<button type="button" onclick="closeModal('contact')"><b>Sorry This service unavailable now!</b></button>
+<button type="button" onclick="closeModal('contact')">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div> 
+
+    <!-- Custom Alert Box --> <!--
+<div id="custom-alert" class="custom-alert">
+  <div class="alert-content">
+    <span id="alert-message"></span>
+    <div id="loading" class="loading" style="display: none;">Submitting...</div>
+    <button class="close-alert" onclick="closeAlert()">Close</button>
+  </div>
+</div>
+
+    <!-- Success Message -->
+    <div id="success-message" class="modal">
+        <div class="modal-content success">
+            <h2>Thank You!</h2>
+            <p>Your message has been sent successfully.</p>
+            <button onclick="closeModal('success-message')">Close</button>
+        </div>
+    </div>
+</body>
+</html>
